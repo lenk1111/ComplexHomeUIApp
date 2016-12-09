@@ -54,7 +54,7 @@ public class ComplexTypesRecycleAdapter extends RecyclerView.Adapter<RecyclerVie
                 HeadViewPagerViewHolder viewPagerHolder = new HeadViewPagerViewHolder(LayoutInflater.from(context).inflate(R.layout.item_complex_type_viewpager, parent, false));
                 return viewPagerHolder;
             case TYPE_NOTICE:
-                MyViewHolder noticeHolder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_complex_type_temp, parent, false));
+                MyViewHolder noticeHolder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_complex_type_notice, parent, false));
                 return noticeHolder;
             case TYPE_HOUSEKEEPER_service:
                 MyViewHolder houseKeeperServiceHolder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_complex_type_temp, parent, false));
