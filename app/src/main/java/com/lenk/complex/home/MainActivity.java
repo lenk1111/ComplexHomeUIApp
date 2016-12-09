@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
+import com.jaeger.library.StatusBarUtil;
 import com.lenk.complex.home.adapter.ComplexTypesRecycleAdapter;
 import com.lenk.complex.home.component.SpaceGridItemDecoration;
 
@@ -15,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        View headLayout = findViewById(R.id.headLayout);
+        StatusBarUtil.setTranslucentForImageView(this, 0, headLayout);
         initRecycler();
     }
 
