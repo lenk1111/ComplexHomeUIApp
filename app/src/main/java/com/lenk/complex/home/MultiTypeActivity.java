@@ -24,6 +24,8 @@ import com.lenk.complex.home.provider.NoticeViewProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.header.StoreHouseHeader;
 import me.drakeet.multitype.Items;
 import me.drakeet.multitype.MultiTypeAdapter;
 
@@ -31,6 +33,7 @@ public class MultiTypeActivity extends AppCompatActivity {
 
     private MultiTypeAdapter adapter;
     Items items = new Items();
+    PtrFrameLayout ptrFrameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,10 @@ public class MultiTypeActivity extends AppCompatActivity {
         StatusBarUtil.setTranslucentForImageView(this, 0, headLayout);
 
         initRecycler();
+
+        ptrFrameLayout = (PtrFrameLayout) findViewById(R.id.store_house_ptr_frame);
+        StoreHouseHeader houseHeader = new StoreHouseHeader(getBaseContext());
+
     }
 
     public void initRecycler() {
